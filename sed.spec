@@ -47,10 +47,10 @@ rm -f $RPM_BUILD_ROOT%{_infodir}/dir
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/postshell
+%post -p /usr/sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun -p /sbin/postshell
+%postun -p /usr/sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files -f %{name}.lang
