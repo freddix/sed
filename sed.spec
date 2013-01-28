@@ -1,11 +1,11 @@
 Summary:	A GNU stream text editor
 Name:		sed
-Version:	4.2.1
-Release:	5
+Version:	4.2.2
+Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://ftp.gnu.org/gnu/sed/%{name}-%{version}.tar.gz
-# Source0-md5:	f0fd4d7da574d4707e442285fd2d3b86
+# Source0-md5:	4111de4faa3b9848a0686b2f260c5056
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
