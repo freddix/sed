@@ -1,7 +1,8 @@
-Summary:	A GNU stream text editor
+# based on PLD Linux spec git://git.pld-linux.org/packages/sed.git
+Summary:	GNU stream text editor
 Name:		sed
 Version:	4.2.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	ftp://ftp.gnu.org/gnu/sed/%{name}-%{version}.tar.gz
@@ -39,10 +40,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name}
 
-rm -f $RPM_BUILD_ROOT%{_infodir}/dir
+%{__rm} $RPM_BUILD_ROOT%{_infodir}/dir
 
+%if 0
 %check
+# ru_RU.UTF-8 locale required
+unset LC_ALL
 %{__make} -j1 check
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
